@@ -37,14 +37,15 @@ func (b *Bar) Increment() (finished bool) {
 
 func (b *Bar) GetString() string {
 	step := float64(b.width) / float64(b.total)
+	place := int((float64(b.current) * step))
 
 	out := b.left
-	for n := 0; n < int((float64(b.current) * step)); n++ {
+	for n := 0; n < place; n++ {
 		out += b.fill
 	}
 	out += b.head
 
-	for n := 0; n < int((float64(b.total-b.current) * step)); n++ {
+	for n := 0; n < b.total-place; n++ {
 		out += b.empty
 	}
 	out += b.right
