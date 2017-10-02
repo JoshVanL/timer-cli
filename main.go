@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/JoshVanL/timer-cli/cmd"
+	"github.com/joshvanl/timer-cli/cmd"
 )
 
 func main() {

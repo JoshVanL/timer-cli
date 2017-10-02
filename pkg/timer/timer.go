@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/JoshVanL/timer-cli/pkg/bar"
+	"github.com/joshvanl/timer-cli/pkg/bar"
 )
 
 type Timer struct {

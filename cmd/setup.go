@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/JoshVanL/timer-cli/pkg/timer"
+	"github.com/joshvanl/timer-cli/pkg/timer"
 )
 
 var short = "Start a cli clock timer. Inputs are number duration suffixed by a time value\ns-second m-minute h-hour. e.g. timer 4s 17m 1h\nOrder does not matter. Duration with no suffix will be used as seconds"
