@@ -9,13 +9,16 @@ import (
 	"github.com/JoshVanL/timer-cli/pkg/timer"
 )
 
+var short = "Start a cli clock timer. Inputs are number duration suffixed by a time value\ns-second m-minute h-hour. e.g. timer 4s 17m 1h\nOrder does not matter. Duration with no suffix will be used as seconds"
+var use = "timer [duration]"
+
 var RootCmd = &cobra.Command{
-	Use:   "timer [duration]",
-	Short: "Start a clock timer. Inputs are number duration suffixed by a time value\ns-second m-minute h-hour. e.g. timer 4s 17m 1h\n Order does not matter. Duration with no suffix will be used as seconds",
+	Use:   use,
+	Short: short,
 	Run: func(cmd *cobra.Command, args []string) {
 
 		if len(args) == 0 {
-			fmt.Println("No arguments given.")
+			fmt.Printf("No arguments given.\n\n%s\n\nUsage:\n	%s\n", short, use)
 			os.Exit(1)
 		}
 
