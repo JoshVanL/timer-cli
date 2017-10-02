@@ -21,10 +21,6 @@ func New() (t *Timer) {
 }
 
 func (t *Timer) ParseArguments(args []string) (err error) {
-	if len(args) > 3 {
-		return errors.New("too many arguments")
-	}
-
 	for _, arg := range args {
 		if seconds, err := strconv.Atoi(arg); err == nil {
 			t.total += seconds
